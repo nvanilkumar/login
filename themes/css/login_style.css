@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'Rubrik-Medium';
+    src: url('../fonts/Rubrik-Medium.eot');
+    src: url('../fonts/Rubrik-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Rubrik-Medium.woff') format('woff'),
+         url('../fonts/Rubrik-Medium.ttf') format('truetype'),
+         url('../fonts/Rubrik-Medium.svg#FlexoMediumRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubrik-Regular';
+    src: url('../fonts/Rubrik-Regular.eot');
+    src: url('../fonts/Rubrik-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Rubrik-Regular.woff') format('woff'),
+         url('../fonts/Rubrik-Regular.ttf') format('truetype'),
+         url('../fonts/Rubrik-Regular.svg#FlexoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.loginbg
+{
+	background:url(../images/background1.jpg) no-repeat 0 0; position:fixed; width:100%; height:100%;
+}
+
+.login_main
+{
+	width:644px; height:auto; margin:0px 0px 0px 40px;
+}
+.copyright_text
+{
+	width:100%; height:atuo; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; font-size:12px; bottom:20px; position:fixed; font-weight:normal; color:#333; text-shadow:#FFF 0px 1px 0.50px; margin:0px; padding:50px 0px 0px 20px; float:left;
+}
+.login_main .midel_bg
+{
+	width:644px; height:auto; margin:0px; padding:0px; float:left;
+}
+.login_main .midel_bg .right_logo
+{
+	width:285px; height:auto; text-align:center; margin:0px; padding:42px 0px 10px; float:left;
+}
+.login_main .midel_bg h2
+{
+	width:558px; height:49px; line-height:49px; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; font-size:20px; font-weight:normal; color:#0072bc; margin:20px 0px 20px 3px; padding:0px 0px 0px 20px; float:left;
+}
+.login_main .midel_bg h6
+{
+	width:558px; height:auto; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; letter-spacing:1px; font-size:16px; font-weight:normal; color:#383838; margin:0px; padding:20px 0px 5px; float:left;
+}
+.login_main .midel_bg .userfills
+{
+	width:318px; height:auto; margin:0px; padding:0px 0px 0px 25px; float:left;
+}
+.login_main .midel_bg .userfills .username
+{
+	width:318px; height:30px; background:#FFF; border:#CCCCCC 1px solid; margin:0px; padding:0px; float:left;
+}
+.login_main .midel_bg .userfills .username input
+{
+	width:308px; height:22px; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; font-size:14px; color:#333; outline:none; background:none; border:none; margin:0px; padding:4px; float:left;
+}
+.login_main .midel_bg .userfills .username input:focus
+{
+outline:none; color:#333; border:1px solid #43b0e4; -webkit-box-shadow:inset 0 2px 2px #ccc, 0 0 10px #9cdaf8; -moz-box-shadow:inset 0 2px 2px #ccc, 0 0 10px #9cdaf8; box-shadow:inset 0 2px 2px #ccc, 0 0 10px #9cdaf8;
+}
+.login_main .midel_bg .userfills p
+{
+	width:122px; height:auto; line-height:35px; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; font-size:14px; color:#0a5aa4; margin:0px; padding:0px 0px 5px; float:left;
+}
+.login_main .midel_bg .userfills p a
+{
+	width:122px; height:auto; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; font-size:14px; color:#0a5aa4; margin:0px; padding:0px; float:left;
+}
+.login_main .midel_bg .userfills .error
+{
+	width:275px; height:auto; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#FF0000; margin:0px; padding:5px 0px 0px; float:left;
+}
+.login_main .midel_bg .userfills samp
+{
+	width:122px; height:auto; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; font-size:14px; color:#2f2f2f; margin:11px 0px 13px; padding:0px; float:right;
+}
+.login_main .midel_bg .userfills samp input
+{
+	width:12px; height:12px; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; font-size:14px; color:#2f2f2f; margin:0px 7px 0px 0px; padding:0px; 
+}
+.login_main .midel_bg .userfills .login_btn
+{
+	width:91px; height:31px; background:#0a5aa4; border:#558fca 1px solid; margin:20px 10px 0px 0px; padding:0px; float:left;
+}
+.login_main .midel_bg .userfills .login_btn input
+{
+	width:91px; height:31px; line-height:31px; background:#558fca url(../images/btn_submit2.png) repeat-x; border:none; cursor:pointer; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; text-align:center; font-size:16px; color:#FFF; list-style-type:none; text-decoration:none; margin:0px; padding:0px; float:left;
+}
+.login_main .midel_bg .userfills .login_btn a
+{
+	width:59px; height:31px; line-height:31px; background:none; border:none; cursor:pointer; font-family:'Rubrik-Regular', Arial, Helvetica, sans-serif; text-align:center; font-size:14px; color:#FFF; list-style-type:none; text-decoration:none; margin:0px; padding:0px; float:left;
+}
+.login_main .midel_bg .userfills .login_btn img
+{
+	width:17px; height:18px; margin:6px 7px 0px 0px; padding:0px; float:left;
+}
+
+
+/****************************   Initial Old Css************************************ */
+.navbar-inner{
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+}
+.right{
+	float: right;
+}
+h2.left{
+	float: left;
+}
+.clear{
+	clear: both;
+}
+.form_elements{
+	margin-bottom: 20px;
+}
+.alert h3{
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+.help-block{
+	color: red;
+}
+.dataTables_info{
+	float: left;
+}
+.dataTables_length{
+	float: right;
+	margin-right: 35px;
+}
+.dataTables_length label{
+	font-size: 0;
+}
+.dataTables_length label,.dataTables_length select{
+	display: inline;
+}
+.dataTables_paginate{
+	float: right;	
+}
+.dataTables_paginate a{
+	margin-left: 20px;
+	cursor: pointer;
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 15px;
+	 -moz-border-radius: 15px;
+		  border-radius: 15px;
+
+}
+.dataTables_paginate a:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+.table {width:100%;}

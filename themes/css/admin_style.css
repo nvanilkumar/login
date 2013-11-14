@@ -1,0 +1,155 @@
+@charset "utf-8";
+/* CSS Document */
+
+ /*----------------------------Drop dwon starts-------------------------------*/
+#header_learn{
+margin:0px;
+overflow:hidden;
+width:auto; height:auto; float:left;
+}
+#header_learn img
+{
+	width:auto !important; height:auto !important; margin:0px; padding:0px; float:left;
+}
+#header_learn h6
+{
+	width:auto; height:auto; line-height:22px; cursor:pointer; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#001217; margin:5px; padding:0px 0px; float:left;
+}
+#header_learn h6:hover
+{
+	width:auto; height:auto; line-height:22px; cursor:pointer; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#4fa2dc; margin:5px; padding:0px 0px; float:left;
+}
+#header_learn .logout
+{
+	width:auto; height:auto; background:#D0D1D4 url(../images/btn_submit.png) repeat-x; border: 1px solid #A8A9A8; -webkit-box-shadow:0 1px 0 #fff; -moz-box-shadow:0 1px 0 #fff; box-shadow:0 1px 0 #fff; margin:5px; padding:0px 10px; float:left;
+}
+#header_learn .logout a
+{
+	width:auto; height:auto; line-height:22px; text-decoration:none; text-shadow:0 1px 0 #fff; cursor:pointer; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#001217; margin:0; padding:0px; float:left;
+}
+#header_learn .logout a:hover
+{
+	width:auto; height:auto; line-height:22px; text-decoration:none; text-shadow:0 1px 0 #fff; cursor:pointer; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#666; margin:0; padding:0px; float:left;
+}
+#header_learn .learn{
+margin:10px 0px 0px 0px;
+padding:0px;
+font-weight:normal;
+color: #4088ad;
+background:#f1f1f2;
+position:absolute;
+display:inline;
+width:auto;
+height:30px;
+right:2%;
+background: url(../images/tarrow.png) right center no-repeat;
+cursor: pointer;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+float:right;
+}
+
+.gbmac{
+right:0;
+margin:-11px 25px 0px 0px;
+border-style: dashed dashed solid;
+border-color: transparent;
+border-bottom-color:#9BA0AF;
+border-width: 0 10px 10px;
+cursor: default;
+display: -moz-inline-box;
+display: inline-block;
+font-size: 0;
+height: 0;
+line-height: 0;
+position: absolute;
+top: 0;
+width: 0;
+z-index: 1000;
+}
+
+#header_learn .activethis{
+background:url(../images/barrow.png) right center no-repeat;
+}
+
+ul.learn_menu, ul.learn_menu li{
+list-style:none;
+margin: 0;
+padding: 0;
+z-index: 999999;
+}
+
+ul.learn_menu{
+display:none;
+margin-top:42px;
+width:250px;
+padding:7px;
+font-size:14px;
+font-weight: bold;
+color: #000;
+background:#FFF;
+border:#9BA0AF 1px solid;
+position: absolute;
+right:0;
+-moz-border-radius:0px 0px 8px 8px;
+-webkit-border-radius:0px 0px 8px 8px;
+-moz-border-radius-topright: 0px;
+-webkit-border-top-right-radius: 0px;
+z-index: 999999;
+}
+
+ul.learn_menu li{
+padding: 5px;
+padding-left: 10px;
+border-bottom:1px solid #498195;
+z-index: 999999;
+}
+
+ul.learn_menu li a{
+font-size:18px;
+padding: 4px 10px;
+display: block;
+color: #424343;
+z-index: 999999;
+list-style-type:none;
+text-decoration:none;
+font-family:Calibri;
+}
+
+ul.learn_menu li a:hover,ul.learn_menu li.orange a:hover{
+color: #65f426;
+list-style-type:none;
+text-decoration:none;
+font-family:Calibri;
+}
+
+ul.learn_menu li.no-line{
+border: 0px;
+margin-bottom: 4px;
+}
+
+ul.learn_menu li.orange a{
+color:#424343;
+list-style-type:none;
+text-decoration:none;
+font-family:Calibri;
+}
+.border_none
+{
+border:none;
+}
+
+
+.gbsbt {
+background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.2)),to(rgba(0,0,0,0)));
+background-image: -webkit-linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));
+background-image: -moz-linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));
+background-image: -ms-linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));
+background-image: -o-linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));
+background-image: linear-gradient(top,rgba(0,0,0,.2),rgba(0,0,0,0));
+height: 6px;
+width:100%;
+top: 0;
+float:left;
+}
+ /*----------------------------Drop dwon end-------------------------------*/
+.valid{border: none !important;}
