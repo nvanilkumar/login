@@ -134,16 +134,18 @@ class Admin extends CI_Controller {
                 $people_info=$this->admin_model->allRecords_where('people',$people_data['peo_name']);
                 if(count($people_info) > 0)
                 {
-                    foreach($people_info as $value)
-                       $person_id= $value->peo_id;
+                    foreach($people_info as $value) 
+                    {
+                        $person_id = $value->peo_id;
+                    }
                 }else{
-                    $persoin_id=$this->admin_model->insert('people',$people_data);
+                    $person_id=$this->admin_model->insert('people',$people_data);
                 } 
                 
                 $role= $this->post('role');
                 $cast_data=array('vid_id' => $video_id,
                                  'rol_id' =>$role[$i],
-                                 'peo_id' => $persoin_id
+                                 'peo_id' => $person_id
                             ); 
                 $this->admin_model->insert('cast_crew',$cast_data);
                 
@@ -172,6 +174,13 @@ class Admin extends CI_Controller {
         $this->admin_model->update('videoinfo',$data,$m_where);
         
     }
+    
+    public function test()
+    {
+        
+       // echo $this->db->last-query();
+        e($movies);
+    }        
     
      
 }

@@ -16,6 +16,7 @@ class remote extends Acl_Controller
         // view directory //
         $this->view_dir = $this->module . '/' . $this->class . '/';
         $this->load->model('login_model');
+        $this->load->model('admin_model');
     }
     public function check_userid()
     {
@@ -121,6 +122,33 @@ class remote extends Acl_Controller
                        ); 
         echo(json_encode($this->admin_model->allRecords_where('videoinfo',$m_data)));exit;
     }
+    //To Bring the selected year movies list
+    public function year_movies_list()
+    {
+        $year = $this->input->post('year');
+        $v_where=array('extract(YEAR from release_date) =' => $year);
+        $movies=$this->admin_model->allRecords_where('videoinfo',$v_where);
+    }        
+    //To Bring the selected alphabhet movies list
+    public function alpha_movies_list()
+    {
+        $name = 'a'.'%';//$this->input->post('text');
+        $v_where=array('vid_name  like' => $name);
+        $movies=$this->admin_model->allRecords_where('videoinfo',$v_where);
+        //echo $this->db->last_query();
+        e($movies);
+    }        
+    //To Bring the selected alphabhet movies list
+    public function genres_movies_list()
+    {
+        foreach($this->post('genres') as $value)
+        {
+            $g_list= $value.',';
+        }
+        $g_list=substr($g_list, 0, -1); 
+        $movies=$this->admin_model->genresMovieList($g_list);
+        
+    }        
 
     
  }
