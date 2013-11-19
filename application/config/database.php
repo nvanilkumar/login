@@ -104,7 +104,7 @@ $db['default']['username'] = 'root';
 
 $db['default']['password'] = '';
 
-$db['default']['database'] = 'movie';
+$db['default']['database'] = 'movie21';
 
 $db['default']['dbdriver'] = 'mysql';
 
