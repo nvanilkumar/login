@@ -48,5 +48,26 @@ class Admin_model extends CI_Model
     {
         return $this->db->get_where($tablename, $data)->result() ;
     }
+    //To Brings the selected user added movies list
+    public function userMovieList($admin_id)
+    {
+        if($admin_id > 0)
+        {
+            return $this->db->select()
+                    ->from('videoinfo')
+                    ->join('admin_video','admin_video.vid_id =videoinfo.vid_id','left')
+                    ->where('admin_video.adm_id',$admin_id)->get()->result();
+        }    
+    }  
+   
+    //selected gener movies list
+    public function genresMovieList($genres_list)
+    {
+        return $this->db->select()
+                ->from('videoinfo')
+                ->join('film_genres','film_genres.vid_id =videoinfo.vid_id','left')
+                ->where_in('film_genres.gen_id',$genres_list)->get()->result();
+
+    }
   
  } 
