@@ -2,7 +2,9 @@
 
 //require('../wordpress/wp-blog-header.php');
 // enable error reporting //
+
 ini_set('display_errors', 'On567');
+
 error_reporting(-1);
 define('MP_DB_DEBUG', TRUE);
 
