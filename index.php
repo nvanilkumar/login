@@ -1,5 +1,4 @@
 <?php
-
 //require('../wordpress/wp-blog-header.php');
 // enable error reporting //
 
