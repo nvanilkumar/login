@@ -7,7 +7,7 @@ class Admin_model extends CI_Model
     
     public function validate($aUserName, $aPassword, $type)
     {     
-        return $this->db->get_where('admin', array('username' => $aUserName, 'password' => $aPassword, 'type' => $type))->row();
+        return $this->db->get_where('adminuser', array('adm_username' => $aUserName, 'adm_password' => $aPassword, 'type' => $type))->row();
 
     }
     
@@ -21,14 +21,7 @@ class Admin_model extends CI_Model
     
     public function insert($tablename, $data) 
     {
-        //         $data = array('name'=>$bizName
-        //                        , 'street'=>$street
-        //                        , 'street2'=>$street2
-        //                        , 'city'=>$city
-        //                        , 'state'=>$state
-        //                        , 'zip'=>$zip
-        //                        , 'country'=>$country
-        //                );
+
         $this->db->insert($tablename,$data) ;
         return $this->db->insert_id() ;
     }

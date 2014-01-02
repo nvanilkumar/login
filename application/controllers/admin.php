@@ -24,7 +24,7 @@ class Admin extends CI_Controller {
          $logintype = $this->input->post('LoginType');
          $type=isset($_POST['Type'])?$_POST['Type']:'0'; 
          $aUser = $this->admin_model->validate($UserName, $sPassword, $logintype);
-       
+//       e($aUser);
          if(!$aUser)
              @$sMessage = "incorrect";
          else if($type == '0'){        

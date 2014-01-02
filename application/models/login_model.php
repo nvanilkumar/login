@@ -184,7 +184,7 @@ class login_model extends CI_Model
     
     public function users_list()
     {
-        return $this->db->select()->from('user')->get()->result();
+        return $this->db->select()->from('adminuser')->get()->result();
     }
     
     public function change_user_status($user_id,$status)
