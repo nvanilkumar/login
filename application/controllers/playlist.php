@@ -56,7 +56,7 @@ class playlist extends CI_Controller {
                     $movies_info[$i]['genre']=$wiki_movie_data[0]->utm_movie_genre;
                     $movies_info[$i]['wiki_url']=$wiki_movie_data[0]->utm_movie_url;
                     
-                }// else{}    we need to handle this case more than 1 movie records are found
+                }// else{}   //no match founc && we need to handle this case more than 1 movie records are found
                 
                 e($movies_info);
             $i++;    
