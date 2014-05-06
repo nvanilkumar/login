@@ -41,6 +41,11 @@ class Admin_model extends CI_Model
     {
         return $this->db->get_where($tablename, $data)->result() ;
     }
+    
+    public function singleRecord_where($tablename,$data) 
+    {
+        return $this->db->get_where($tablename, $data)->row() ;
+    }
     //To Brings the selected user added movies list
     public function userMovieList($admin_id)
     {

@@ -29,7 +29,7 @@ class login extends Acl_Controller
     {
         $data['content'] = $this->load->view($this->view_dir . 'signup','', TRUE);
         if($this->input->post('submit') )
-	{
+        {
             $data['type']=$this->input->post('usertype');
             $data['key'] = uniqid();
             $this->login_model->signup($data);

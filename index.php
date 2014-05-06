@@ -33,8 +33,8 @@ date_default_timezone_set('Asia/Calcutta');
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-//define('ENVIRONMENT', 'development');
- define('ENVIRONMENT', 'testing');
+define('ENVIRONMENT', 'development');
+ //define('ENVIRONMENT', 'testing');
 /*
  * ---------------------------------------------------------------
  * ERROR REPORTING
@@ -183,6 +183,7 @@ define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
 
 //theme url for js/ css
 //define('version', bace."themes/");
+define('current_date_time',date("Y-m-d H:i:s"));
 define('DIRECTORY_SEPARATOR2','/');
 define('BASEURL','http://' . $_SERVER['HTTP_HOST'] . '/login/');
 define('IMAGE_PATH', BASEURL.'themes'.DIRECTORY_SEPARATOR2.'images'.DIRECTORY_SEPARATOR2);   

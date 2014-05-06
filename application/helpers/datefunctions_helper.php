@@ -66,3 +66,9 @@ function e($res)
     echo "<pre>";print_r($res);echo "</pre>";exit;
 }
 
+function q()
+{
+     $CI =& get_instance();
+    echo $CI->db->last_query();
+}
+

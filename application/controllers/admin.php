@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
     public function __construct() {
     parent::__construct();
             $this->view_dir = strtolower(__CLASS__) . '/';
+            $this->load->helper('movie_insert');
     }  
 
     public function index()
@@ -180,6 +181,7 @@ class Admin extends CI_Controller {
         
        // echo $this->db->last-query();
         e($movies);
+        
     }        
     
      
