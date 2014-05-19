@@ -72,6 +72,7 @@ class playlist extends CI_Controller {
         $data =array();     
         $data['content'] = $this->load->view($this->view_dir .'test',$data,TRUE);
         $this->load->view('admin_template',$data);
+        
     }    
             
             
