@@ -35,7 +35,7 @@ if(!function_exists('insert_movie')) {
                 insert_cast_crew($movies_info['producer'],'producer',$film_id);
                 
                 //video information
-
+                insert_video_information($movies_info['video_url'],$film_id);
  
                 
                 
@@ -55,7 +55,25 @@ if(!function_exists('insert_movie')) {
    
 }
 
-//To Inser the cast & crew information
+//To Insert the video url details realted to film
+
+function insert_video_information()
+{
+    $video_data = array( 'utm_film_title' => $movies_info['movie_name'],
+                                    'utm_film_wiki_url' => $movies_info['wiki_url'],
+                                    'utm_film_description' => $movies_info['description'],
+                                    'utm_film_release_year' => $movies_info['year'],
+                                    'utm_film_release_date' => $movies_info['release_date'],
+                                    'utm_film_awards_info' =>  '',
+                                    'utm_film_language' => 'Telugu',
+                                    'utm_film_created_by' => 'MAK',
+                                    'utm_film_created_date' => current_date_time,
+                                    'utm_film_updated_by' => 'MAK' ); 
+                $film_id=$this->admin_model->insert('utm_film',$video_data);
+    
+}
+
+//To Insert the cast & crew information
 //p,f_c,f_P,
 function insert_cast_crew($person_name,$role_name,$film_id)
 {
@@ -87,6 +105,15 @@ function insert_cast_crew($person_name,$role_name,$film_id)
                                    'utm_film_person_created_date' => current_date_time,
                                    'utm_film_person_updated_by' => 'MAK' ); 
        $this->admin_model->insert('utm_film_person',$film_person_data);
+       
+       //Film  - Cast (persion, role film
+       $film_cast_data = array( 'utm_film_cast_role_id' => $role_id,
+                                   'utm_film_cast_people_d' => $person_id,
+                                   'utm_film_cast_film_id' => $film_id,
+                                   'utm_film_cast_created_by' => 'MAK',
+                                   'utm_film_cast_created_date' => current_date_time,
+                                   'utm_film_cast_updated_by' => 'MAK' ); 
+       $this->admin_model->insert('utm_film_cast',$film_cast_data);
        
     }    
     
