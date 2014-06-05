@@ -26,5 +26,6 @@ class test extends CI_Controller {
         $data['content'] = $this->load->view($this->view_dir . 'sample2',$data, TRUE);
         $this->load->view('template', $data);
         
+        
      }        
 }
