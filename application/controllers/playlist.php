@@ -9,6 +9,7 @@ class playlist extends CI_Controller {
         parent::__construct();
         $this->view_dir = strtolower(__CLASS__) . '/';
         $this->load->helper('movie_insert');
+        $this->load->library('moviedetails');
     }
 
     public function index() {
@@ -29,7 +30,7 @@ class playlist extends CI_Controller {
         $movies_info = array();
         if (count($playlist_data) == 0) {//New Playlist Youtube ID
             foreach ($obj as $movie) {
-                
+
                 $movies_info[$i]['movie_name'] = get_movie_name($movie['title']['$t']);
                 $movies_info[$i]['description'] = $movie['media$group']['media$description']['$t'];
                 $movies_info[$i]['video_url'] = $movie['link'][0]['href'];
@@ -47,32 +48,33 @@ class playlist extends CI_Controller {
 
                 //check in the wikipedia movie db with movie name
                 $movie_where = array('utm_movie_title' => $movies_info[$i]['movie_name']);
-                $wiki_movie_data = $this->admin_model->allRecords_where('utm_movie', $movie_where); 
+                $wiki_movie_data = $this->admin_model->allRecords_where('utm_movie', $movie_where);
                 if (count($wiki_movie_data) == 1) { //exact match in the db
                     $movies_info[$i]['release_date'] = $wiki_movie_data[0]->utm_movie_release_date;
                     $movies_info[$i]['year'] = $wiki_movie_data[0]->utm_movie_year;
                     $movies_info[$i]['description'] = $movies_info[$i]['description'] . ' ---test--' . $wiki_movie_data[0]->utm_movie_cast;
                     $movies_info[$i]['genre'] = $wiki_movie_data[0]->utm_movie_genre;
                     $movies_info[$i]['wiki_url'] = $wiki_movie_data[0]->utm_movie_url;
-                    insert_movie($movies_info);
-                }// else{}   //no match founc && we need to handle this case more than 1 movie records are found
+                    $this->moviedetails->insert_movie($movies_info[$i]);
+                } else{//no match found && we need to handle this case more than 1 movie records are found
+                   echo '<br/> NO Match found in Wiki db or more than one record exist in db'.$movies_info[$i];  
+                }   
 
-                e(333);
+                d('end of one movie '. $movies_info[$i]['movie_name'].'<br/>');
                 $i++;
             }//e($movies_info);
         } else {//Old Playlist Youtube ID
         }//endo of playlist loop    
     }
 
-    public function check()
-    {
-        if($this->input->post('submit')){
-            insert_movie();e();
+    public function check() {
+        if ($this->input->post('submit')) {
+            insert_movie();
+            e();
         }
-        $data =array();     
-        $data['content'] = $this->load->view($this->view_dir .'test',$data,TRUE);
-        $this->load->view('admin_template',$data);
-    }    
-            
-            
+        $data = array();
+        $data['content'] = $this->load->view($this->view_dir . 'test', $data, TRUE);
+        $this->load->view('admin_template', $data);
+    }
+
 }
