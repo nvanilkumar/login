@@ -52,15 +52,21 @@ class playlist extends CI_Controller {
                 if (count($wiki_movie_data) == 1) { //exact match in the db
                     $movies_info[$i]['release_date'] = $wiki_movie_data[0]->utm_movie_release_date;
                     $movies_info[$i]['year'] = $wiki_movie_data[0]->utm_movie_year;
-                    $movies_info[$i]['description'] = $movies_info[$i]['description'] . ' ---test--' . $wiki_movie_data[0]->utm_movie_cast;
+                    $movies_info[$i]['description'] = $movies_info[$i]['description'] . ' -----' . $wiki_movie_data[0]->utm_movie_cast;
                     $movies_info[$i]['genre'] = $wiki_movie_data[0]->utm_movie_genre;
                     $movies_info[$i]['wiki_url'] = $wiki_movie_data[0]->utm_movie_url;
-                    $this->moviedetails->insert_movie($movies_info[$i]);
+                    
                 } else{//no match found && we need to handle this case more than 1 movie records are found
-                   echo '<br/> NO Match found in Wiki db or more than one record exist in db'.$movies_info[$i];  
-                }   
+                    $movies_info[$i]['release_date'] = "";
+                    $movies_info[$i]['year'] = "";
+                    $movies_info[$i]['description'] = $movies_info[$i]['description'];
+                    $movies_info[$i]['genre']  = "";
+                    $movies_info[$i]['wiki_url']  = "";
+                   echo '<br/> NO Match found in Wiki db or more than one record exist in db'.$movies_info[$i]['movie_name'];  
+                }  
+                $this->moviedetails->insert_movie($movies_info[$i]);
 
-                d('end of one movie '. $movies_info[$i]['movie_name'].'<br/>');
+               // d('end of one movie '. $movies_info[$i]['movie_name'].'<br/>');
                 $i++;
             }//e($movies_info);
         } else {//Old Playlist Youtube ID

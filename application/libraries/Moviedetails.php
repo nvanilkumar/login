@@ -61,7 +61,7 @@ class Moviedetails {
         $video_data = array('utm_video_url' => $movies_info['video_url'],
             'utm_video_name' => $movies_info['movie_name'],
             'utm_video_description' => $movies_info['description'],
-            'utm_video_type' => 'Normal', //Tyes are HD,DVD,PDVD, Normal
+            'utm_video_type' => 'Normal', //Types are HD,DVD,PDVD, Normal
             'utm_video_linkstatus' => 'active',
             'utm_video_viewcount' => 0,
             'utm_video_part_no' => 0, //For full length movie
