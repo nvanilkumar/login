@@ -6,5 +6,5 @@
 [11-Oct-2012 23:37:32] PHP Fatal error:  ob_start() [<a href='ref.outcontrol'>ref.outcontrol</a>]: Cannot use output buffering in output buffering display handlers in /home/fsiprz2n/public_html/ihus/system/core/Exceptions.php on line 181
 [11-Oct-2012 23:37:37] PHP Fatal error:  ob_start() [<a href='ref.outcontrol'>ref.outcontrol</a>]: Cannot use output buffering in output buffering display handlers in /home/fsiprz2n/public_html/ihus/system/core/Exceptions.php on line 181
 [11-Oct-2012 23:37:48] PHP Fatal error:  ob_start() [<a href='ref.outcontrol'>ref.outcontrol</a>]: Cannot use output buffering in output buffering display handlers in /home/fsiprz2n/public_html/ihus/system/core/Exceptions.php on line 181
-[11-Oct-2012 23:40:06] PHP Fatal error:  ob_start() [<a href='ref.outcontrol'>ref.outcontrol</a>]: Cannot use output buffering in output buffering display handlers in /home/fsiprz2n/public_html/ihus/system/core/Exceptions.php on line 181
+removed
 [11-Oct-2012 23:40:29] PHP Fatal error:  ob_start() [<a href='ref.outcontrol'>ref.outcontrol</a>]: Cannot use output buffering in output buffering display handlers in /home/fsiprz2n/public_html/ihus/system/core/Exceptions.php on line 181
