@@ -18,7 +18,8 @@ class playlist extends CI_Controller {
     }
 
     public function insert_lists() {
-        $list_id = 'VnCEiQqNkQrbVPQau0Z9kKcX3ZyKym8u';
+//        $list_id = 'VnCEiQqNkQrbVPQau0Z9kKcX3ZyKym8u';
+        $list_id = 'PLXBHKlMRm_yz539EDhiJro68WohNTCUnj';
         $ply_where = array('utm_playlist_details_youtube_id' => $list_id);
         $playlist_data = $this->admin_model->allRecords_where('utm_playlist_details', $ply_where);
         $json_string = 'https://gdata.youtube.com/feeds/api/playlists/' . $list_id . '?v=2&alt=json';
@@ -30,7 +31,7 @@ class playlist extends CI_Controller {
         $movies_info = array();
         if (count($playlist_data) == 0) {//New Playlist Youtube ID
             foreach ($obj as $movie) {
-
+//d($movie);
                 $movies_info[$i]['movie_name'] = get_movie_name($movie['title']['$t']);
                 $movies_info[$i]['description'] = $movie['media$group']['media$description']['$t'];
                 $movies_info[$i]['video_url'] = $movie['link'][0]['href'];
@@ -64,6 +65,7 @@ class playlist extends CI_Controller {
                     $movies_info[$i]['wiki_url']  = "";
                    echo '<br/> NO Match found in Wiki db or more than one record exist in db'.$movies_info[$i]['movie_name'];  
                 }  
+//               e($movies_info[$i]) ; 
                 $this->moviedetails->insert_movie($movies_info[$i]);
 
                // d('end of one movie '. $movies_info[$i]['movie_name'].'<br/>');

@@ -185,7 +185,7 @@ define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
 //define('version', bace."themes/");
 define('current_date_time',date("Y-m-d H:i:s"));
 define('DIRECTORY_SEPARATOR2','/');
-define('BASEURL','http://' . $_SERVER['HTTP_HOST'] . '/login/');
+define('BASEURL','http://' . $_SERVER['HTTP_HOST'] . '/utm/');
 define('IMAGE_PATH', BASEURL.'themes'.DIRECTORY_SEPARATOR2.'images'.DIRECTORY_SEPARATOR2);   
 define('CSS_PATH', BASEURL.'themes'.DIRECTORY_SEPARATOR2.'css'.DIRECTORY_SEPARATOR2);
 define('JS_PATH', BASEURL.'themes'.DIRECTORY_SEPARATOR2.'js'.DIRECTORY_SEPARATOR2);

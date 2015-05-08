@@ -39,9 +39,18 @@ class Moviedetails {
                 //Insert Genres Information
                 $this->insert_genre_information($movies_info['genre'], $film_id);
                 //Film Cast & crew Info
-                $this->insert_cast_crew($movies_info['director'], 'director', $film_id);
-                $this->insert_cast_crew($movies_info['writer'], 'writer', $film_id);
-                $this->insert_cast_crew($movies_info['producer'], 'producer', $film_id);
+                if( strlen($movies_info['director']) >1){
+                    $this->insert_cast_crew($movies_info['director'], 'director', $film_id);
+                }
+                if( strlen($movies_info['writer']) >1){
+                    $this->insert_cast_crew($movies_info['writer'], 'writer', $film_id);
+                }
+                if( strlen($movies_info['producer']) >1){
+                    $this->insert_cast_crew($movies_info['producer'], 'producer', $film_id);
+                }
+                
+                
+                
 
                 //video information
                 $this->insert_video_information($movies_info, $film_id);
